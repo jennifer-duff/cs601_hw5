@@ -1,0 +1,117 @@
+:root {
+    /*fonts*/
+    --monospace-font: 'IBM Plex Mono', monospace;
+    --serif-font: 'EB Garamond', serif;
+    --sans-serif-font: 'Manrope', 'Helvetica Nue', sans-serif;
+
+    /*colors*/
+    --burnt-orange: #cf6846;
+    --eggshell: rgb(255, 252, 249);
+    --forest-green: #2f4428;
+    --periwinkle: #4e71cf;
+    --tan: rgb(255, 243, 222);
+
+    /*other settings*/
+    --box-shadow-green: 5px 5px 0 var(--forest-green);
+    --box-shadow-orange: 5px 5px 0 var(--burnt-orange);
+    --border-radius: 6px;
+    --border-settings: 1px solid var(--forest-green);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif-font);
+    height: 100vh;
+    margin: 20vh 0 0 0;
+    background-color: var(--tan);
+}
+
+h1 {
+    color: var(--forest-green);
+    font-size: 40pt;
+    font-weight: 900;
+    font-family: var(--serif-font);
+    margin: 0;
+    text-decoration: 6px solid underline var(--periwinkle);
+}
+
+button {
+    /* background-color: var(--eggshell); */
+    background-color: var(--burnt-orange);
+    border-radius: var(--border-radius);
+    /* border: var(--border-settings); */
+    border: none;
+
+    /* box-shadow: var(--box-shadow-orange); */
+    cursor: pointer;
+    /* font-family: var(--monospace-font); */
+    font-family: var(--sans-serif-font);
+    font-size: 12pt;
+    /* font-weight: 500; */
+    font-weight: 700;
+
+    margin: 3vh 0 3vh 0;
+    padding: 10px 20px;
+    transition: 0.15s ease-in-out;
+}
+
+button:hover,
+button:active,
+button:focus {
+    /* box-shadow: 8px 8px 0 var(--burnt-orange); */
+    font-weight: 900;
+    transform: scale(1.1);
+}
+
+table {
+    background-color: var(--eggshell);
+    border: var(--border-settings);
+    border-radius: var(--border-radius);
+    border-spacing: 0;
+    box-shadow: var(--box-shadow-green);
+    display: none;
+}
+
+th,
+td {
+    border-right: var(--border-settings);
+    padding: 5px 10px;
+}
+
+th:last-of-type,
+td:last-of-type {
+    border-right: 0px;
+}
+
+tr:not(:last-child) th,
+tr:not(:last-child) td {
+    border-bottom: var(--border-settings);
+}
+
+/* td {
+    font-family: var(--monospace-font);
+} */
+
+th {
+    /* font-family: var(--serif-font); */
+    font-size: 14pt;
+    font-weight: 800;
+    color: var(--forest-green)
+}
+
+#error-msg {
+    color: var(--burnt-orange);
+    font-family: var(--serif-font);
+    font-weight: 800;
+    font-size: 20pt;
+    font-style: italic;
+    /*Helps text look centered compared to box-shadow of table*/
+    margin-left: 10px;
+    text-align: center;
+}

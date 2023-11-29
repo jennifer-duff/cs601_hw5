@@ -1,0 +1,20 @@
+{
+    "Pepperdine": {
+        "name": "Pepperdine University",
+        "major": "Biology",
+        "type": "BA",
+        "year_conferred": "2017"
+    },
+    "WGU": {
+        "name": "Western Governors University",
+        "major": "Software Development",
+        "type": "BS",
+        "year_conferred": "2022"
+    },
+    "BU": {
+        "name": "Boston University",
+        "major": "Software Development",
+        "type": "MS",
+        "year_conferred": "2023"
+    }
+}
