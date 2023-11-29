@@ -7,7 +7,7 @@ async function fetchData() {
     // (i.e., if the user clicks the button multiple times)
     let numRows = table.children[0].childElementCount;
     if (numRows < MAX_ROWS) {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto"); //TODO: update this URL
+        const response = await fetch("https://jennifer-duff.github.io/cs601_hw5/data.json");
         const status = response.status;
 
         if (status === 200) {
@@ -23,29 +23,8 @@ async function fetchData() {
 }
 
 function displayData(data) {
-    errorMsg.innerHTML = "";    // wipe error message if there was one
-
-    // TODO: remove this section
-    data = {
-        "Pepperdine": {
-            "name": data.name,
-            "major": String(data.base_experience),
-            "type": String(data.height),
-            "year_conferred": String(data.order)
-        },
-        "WGU": {
-            "name": data.name,
-            "major": String(data.base_experience),
-            "type": String(data.height),
-            "year_conferred": String(data.order)
-        },
-        "BU": {
-            "name": data.name,
-            "major": String(data.base_experience),
-            "type": String(data.height),
-            "year_conferred": String(data.order)
-        },
-    };
+    // wipe error message if there was one
+    errorMsg.innerHTML = "";
 
     table.style.display = "block";
 
