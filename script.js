@@ -3,7 +3,7 @@ const table = document.getElementById("degree-table");
 const MAX_ROWS = 4;
 
 async function fetchData() {
-    // Don't fetch the data if it's already been fetched
+    // Don't fetch the data if it's already been succesfully fetched
     // (i.e., if the user clicks the button multiple times)
     let numRows = table.children[0].childElementCount;
     if (numRows < MAX_ROWS) {
@@ -23,11 +23,13 @@ async function fetchData() {
 }
 
 function displayData(data) {
-    // wipe error message if there was one
+    // Wipe error message if there was one
     errorMsg.innerHTML = "";
 
+    // Make the table visible
     table.style.display = "block";
 
+    // Fill in the table with the data (one row per entry)
     for (const entry of Object.values(data)) {
         const row = table.insertRow();
 

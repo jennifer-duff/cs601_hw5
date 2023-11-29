@@ -54,8 +54,7 @@ button {
 }
 
 button:hover,
-button:active,
-button:focus {
+button:active {
     font-weight: 900;
     transform: scale(1.1);
 }
